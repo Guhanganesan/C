@@ -1,21 +1,26 @@
-#include <stdio.h>  
-#include <conio.h>  
-void change(int *num) {  
-    printf("Before adding value inside function num=%d \n",*num);  
-    (*num) += 100;  
-    printf("After adding value inside function num=%d \n", *num);  
-}  
-// An address of value is passed to the function
-//Changes made inside the function is reflected outside the function also
+#include<stdio.h>
 
-int main() {  
-    int x=100;  
-  
-  
-    printf("Before function call x=%d \n", x);  
-    change(&x);//passing reference in function  
-    printf("After function call x=%d \n", x);  
-  
-    getch();  
-    return 0;  
-}  
+int add(int *x, int *y)
+{
+	//printf("%d",(a+b));
+	*x=30; // This will affect original values of a and b
+	*y=30;
+	return *x+*y;
+}
+
+int main()
+{
+   int a=40, b=50;
+   int res = add(&a, &b);
+   printf("%d \n",res);
+   printf("a is %d and b is %d", a, b);
+   return 0;
+}
+
+/*
+Output:-
+
+60 
+a is 30 and b is 30
+
+*/
