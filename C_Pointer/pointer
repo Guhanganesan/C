@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+int main()
+{
+   int a=40;
+   printf("a is in the address of: %d \n", &a); 
+   
+   int *x=&a;
+   printf("a has a value of : %d \n",*x);
+   
+   printf("a was in the address of: %d \n", x);
+   
+   //int *p = NULL; 	//null pointer
+   //void *p = NULL; 	//void pointer
+   //int *p; 	//wild pointer
+   
+   return 0;
+}
+
+/*
+Output:-
+a is in the address of: 939932948 
+a has a value of : 40 
+a was in the address of: 939932948 
+*/
