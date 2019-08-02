@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main()
@@ -11,9 +10,9 @@ int main()
         //printf("%c",name[i]);
         int x = (int)name[i]+2;
         char c=(char)x;
-        printf("%c",c);
+        //printf("%c",c);
+        temp[i]=c;
     }
-    
+    printf("%s",temp);
     return 0;
 }
-
